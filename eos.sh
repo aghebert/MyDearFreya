@@ -31,8 +31,8 @@ chroot () {
 
     echo Installing some UI tweaks...
     #dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad disable-while-typing true
-    dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad tap-to-click true
-    dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad motion-acceleration 5.0
+    #dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad tap-to-click true
+    #dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad motion-acceleration 5.0
     #dbus-launch gsettings set org.gnome.desktop.interface cursor-size 48
 
     echo Fixing permissions...
@@ -61,7 +61,7 @@ chroot () {
     echo ==================================================
     echo if it hangs unmounting, hit Ctrl+C to return to the crosh shell...
     echo and enter the following command from the chrosh shell:
-    echo '      sudo sh freya.sh continue'
+    echo '      sudo sh eos.sh continue'
     echo ==================================================
     echo ==================================================
     echo ==================================================
@@ -70,17 +70,17 @@ chroot () {
 
 chrome () {
 
-	sh -e crouton -r trusty -t x11,extension -n freya
+	sh -e crouton -r trusty -t x11,extension -n eos
     echo ==================================================
     echo ==================================================
     echo ==================================================
     echo ==================================================
     echo To continue, enter your chroot:
-    echo '      sudo enter-chroot -n freya'
+    echo '      sudo enter-chroot -n eos'
     echo ==================================================
     echo ==================================================
     echo And from the chroot, enter the following command:
-    echo '      sudo sh ~/Downloads/freya.sh installelementary'
+    echo '      sudo sh ~/Downloads/eos.sh installelementary'
     echo ==================================================
     echo ==================================================
     echo ==================================================
